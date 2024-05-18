@@ -10,12 +10,47 @@
 ?>
 
 <html>
-    <head><title>Employee Details</title></head>
+    <head>
+        <title>Employee Details</title>
+        <link rel="stylesheet" href="../assets/styleAll.css">
+    </head>
     <body>
-        <h1>Car Shop </h1>
+    <table class="tab">
+    <tr>
+        <td><img src="../assets/carlogo.jpg" height="100px" weight="200px" alt=""></td>
+        <td><h1>Luxary Car Shop</h1></td>
+        <td><a href="managerInfo.php"><img src="../assets/login.png" height="100px" weight="80px" alt=""></a><br>
+            Welcome <?php echo $_SESSION['id'];?><br>
+            <button><a href="../controler/logout.php">Logout</a></button>
+        </td>
+        </tr>
+    </table>
+    <table class= "ribon">
+        <tr>
+            <td><h3><a href="empRegPage.php">Employee</a></h3></td>
+            <td><h3><a href="managerDash.php">Customer</a></h3></td>
+            <td><h3><a href="sellReport.php">Sell Report</a></h3></td>
+        </tr>
+
+    </table>
+
+        
         <h2>Employee List</h2>
+
+        <form action="empShowS.php" method="post">
+        <table>
+        <tr>
+            <td>Search by Name/ID/Shift/phone: </td>
+            <td><input type="text" name="search"></td>
+            <td><button name="btsearch">Search</button></td>
+        </tr>
+        </table>
+        </form>
+        
+        <br><hr><br>
+
         <form method="get" action="../controler/upDelRun.php">
-        <table border= "2">
+        <table border= "2" align= "center" class="show">
             <tr>
                 <th>ID</th> 
                 <th>Name</th> 
@@ -42,9 +77,9 @@
                     <button name= "delete" value="<?php echo $s["emp_id"]; ?>">Delete</button>
                 </td>
             </tr>
-            <?php }?>
+            <?php } ?>
         </table>
         </form>
-        <button><a href="empRegPage.php">Back</a></button>
+        
     </body>
 </html>

@@ -1,0 +1,22 @@
+.tab {
+  text-align: center;
+  height: 150px;
+  width: 100%;
+}
+.login {
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ribon{
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  
+}
+.show{
+  text-align: center;
+  width: 100%;
+}
